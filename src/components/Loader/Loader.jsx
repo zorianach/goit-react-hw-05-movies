@@ -3,10 +3,10 @@ import { ProgressBar } from 'react-loader-spinner';
  const Loader = ({ isLoading }) => {
   return (
     <ProgressBar
-        visible={true}
+        visible={isLoading}
         height="80"
         width="80"
-        color="#4fa94d"
+        color="rgb(81, 29, 131)"
         ariaLabel="progress-bar-loading"
         wrapperStyle={{}}
         wrapperClass=""
