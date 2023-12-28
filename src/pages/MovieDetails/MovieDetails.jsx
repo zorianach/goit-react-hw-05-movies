@@ -8,7 +8,7 @@ const MovieDetails = () => {
     const { movieId } = useParams();
     const [movieDetails, setMovieDetails] = useState({});
     const location = useLocation();
-    const buttonBack = location.state?.from ?? `/`;
+    const buttonBack = location.state?.from ?? `/movies`;
 
 
 useEffect(() => {
@@ -17,7 +17,7 @@ useEffect(() => {
     .catch(error => console.error(error));
 }, [movieId])
 
-
+console.log(location);
 const {title, vote_average, overview, genres, poster_path} = movieDetails;
 return(
     // console.log(movieDetails)
